@@ -28,8 +28,10 @@ h5 {
     justify-content: center;
     align-items: center;
     height: 100%;
+    width: auto;
     gap: 10rem;
     scroll-snap-align: center;
+    background-color: var(--light-blue);
 }
 
 .redcat {
@@ -67,6 +69,7 @@ h5 {
     border-radius: 15px;
     color: var(--red);
     font-weight: 600;
+    background-color: var(--light-blue);
     /* transition: 300ms; */
     transition: 300ms background-color;
     transition: 300ms color;

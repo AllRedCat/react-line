@@ -1,4 +1,5 @@
-import './Home.css'
+import './Home.scss'
+import desingImg from './assets/design illustration.svg'
 
 function ContactButton() {
     return (
@@ -10,9 +11,7 @@ function Home() {
     return (
         <div className="hi-container">
             <div className="hi">
-                <div className="hello">
-                    <h5>Olá</h5>
-                </div>
+                <h5 className='hello'>Olá</h5>
                 <h2>Eu sou Gabriel</h2>
                 <div className="redcat">
                     <h4>RedCat</h4>
@@ -30,7 +29,9 @@ function Home() {
                     <ContactButton />
                 </div>
             </div>
-            <div className='my-img'></div>
+            <div className='my-img'>
+                <img src={desingImg} alt="Design Illustration"/>
+            </div>
         </div>
     );
 }
