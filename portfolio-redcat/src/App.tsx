@@ -1,6 +1,6 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
 import './App.css'
+import Home from './Home.tsx'
 
 function NavBar() {
   return (
@@ -31,6 +31,9 @@ function App() {
       <header>
         <NavBar />
       </header>
+      <main>
+        <Home />
+      </main>
     </>
   )
 }
