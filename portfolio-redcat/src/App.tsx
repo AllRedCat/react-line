@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import './App.css'
 import Home from './Home.tsx'
+import About from './About.tsx'
 
 function NavBar() {
   return (
@@ -24,7 +25,14 @@ function NavBar() {
   );
 }
 
-// bg-light-subtle
+function Content() {
+  return (
+    <>
+      <Home />
+      <About />
+    </>
+  );
+}
 
 function App() {
 
@@ -35,7 +43,7 @@ function App() {
           <NavBar />
         </header>
         <main>
-          <Home />
+          <Content />
         </main>
       </body>
     </>
