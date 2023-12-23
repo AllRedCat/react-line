@@ -6,6 +6,8 @@
     --strong-orange: #FF5232;
     --light-blue: #5BFFB5;
     --white: #f7f7f7;
+    --light-gray: #f7f7f7;
+    --dark-gray: #404040;
 }
 
 h2 {
@@ -77,6 +79,7 @@ h5 {
 
 .contact-btn:hover {
     background-color: var(--strong-orange);
+    border: var(--strong-orange) solid;
     color: var(--white);
 }
 
