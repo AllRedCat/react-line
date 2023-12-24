@@ -7,12 +7,22 @@ function HomePage() {
   return (<Home />);
 }
 
+function AboutPage() {
+  return (<About />);
+}
+
 function App() {
   const [showHome, setShowHome] = useState(true);
-  
+  const [showAbout, setShowAbout] = useState(false);
 
   function HomeShow() {
     setShowHome(true);
+    setShowAbout(false);
+  }
+
+  function AboutShow() {
+    setShowAbout(true);
+    setShowHome(false);
   }
 
   return (
@@ -28,10 +38,10 @@ function App() {
               </button>
               <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
                 <div className="navbar-nav ms-auto">
-                  <a className="nav-link" href="">Sobre</a>
-                  <a className="nav-link" href="">Serviços</a>
-                  <a className="nav-link" href="">Portfólio</a>
-                  <a className="nav-link" href="">Contato</a>
+                  <a className="nav-link" href="#" onClick={AboutShow}>Sobre</a>
+                  <a className="nav-link" href="#">Serviços</a>
+                  <a className="nav-link" href="#">Portfólio</a>
+                  <a className="nav-link" href="#">Contato</a>
                 </div>
               </div>
             </div>
@@ -39,6 +49,7 @@ function App() {
         </header>
         <main>
           {showHome && <HomePage />}
+          {showAbout && <AboutPage />}
         </main>
       </body>
     </>
