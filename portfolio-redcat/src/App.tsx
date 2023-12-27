@@ -71,7 +71,6 @@ function App() {
                   <a className="nav-link" href="#" onClick={AboutShow}>Sobre</a>
                   <a className="nav-link" href="#" onClick={ServicesShow}>Serviços</a>
                   <a className="nav-link" href="#" onClick={JobsShow}>Portfólio</a>
-                  <a className="nav-link" href="#">Contato</a>
                 </div>
               </div>
             </div>
