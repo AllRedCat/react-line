@@ -1,3 +1,5 @@
+import './Services.scss'
+
 function Services() {
     return (
         <div id="services" className="services-container">
