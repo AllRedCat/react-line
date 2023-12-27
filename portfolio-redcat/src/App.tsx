@@ -1,11 +1,12 @@
+// import section
 import { useState } from 'react'
 import './App.css'
 import Home from './Home.tsx'
 import About from './About.tsx'
 import Services from './Services.tsx'
 import Jobs from './Jobs.tsx'
-// import ContactForm from './ContactForm.tsx'
 
+// pages section
 function HomePage() {
   return (<Home />);
 }
@@ -22,6 +23,7 @@ function JobsPage() {
   return (<Jobs />)
 }
 
+// App section
 function App() {
   const [showHome, setShowHome] = useState(true);
   const [showAbout, setShowAbout] = useState(false);
