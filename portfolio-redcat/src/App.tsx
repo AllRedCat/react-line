@@ -3,6 +3,7 @@ import './App.css'
 import Home from './Home.tsx'
 import About from './About.tsx'
 import Services from './Services.tsx'
+import Jobs from './Jobs.tsx'
 
 function HomePage() {
   return (<Home />);
@@ -16,27 +17,42 @@ function ServicesPage() {
   return (<Services />)
 }
 
+function JobsPage() {
+  return (<Jobs />)
+}
+
 function App() {
   const [showHome, setShowHome] = useState(true);
   const [showAbout, setShowAbout] = useState(false);
   const [showServices, setShowServices] = useState(false);
+  const [showJobs, setShowJobs] = useState(false);
 
   function HomeShow() {
     setShowHome(true);
     setShowAbout(false);
     setShowServices(false);
+    setShowJobs(false);
   }
 
   function AboutShow() {
     setShowAbout(true);
     setShowHome(false);
     setShowServices(false);
+    setShowJobs(false);
   }
 
   function ServicesShow() {
     setShowServices(true);
     setShowHome(false);
     setShowAbout(false);
+    setShowJobs(false);
+  }
+
+  function JobsShow() {
+    setShowJobs(true);
+    setShowHome(false);
+    setShowAbout(false);
+    setShowServices(false);
   }
 
   return (
@@ -54,7 +70,7 @@ function App() {
                 <div className="navbar-nav ms-auto">
                   <a className="nav-link" href="#" onClick={AboutShow}>Sobre</a>
                   <a className="nav-link" href="#" onClick={ServicesShow}>Serviços</a>
-                  <a className="nav-link" href="#">Portfólio</a>
+                  <a className="nav-link" href="#" onClick={JobsShow}>Portfólio</a>
                   <a className="nav-link" href="#">Contato</a>
                 </div>
               </div>
@@ -65,6 +81,7 @@ function App() {
           {showHome && <HomePage />}
           {showAbout && <AboutPage />}
           {showServices && <ServicesPage />}
+          {showJobs && <JobsPage />}
         </main>
       </body>
     </>
