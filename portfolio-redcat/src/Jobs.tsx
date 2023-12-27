@@ -1,3 +1,5 @@
+import './Jobs.scss'
+
 function Jobs() {
     return (
         <section id="portfolio" class="jobs-container">
