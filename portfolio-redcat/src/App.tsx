@@ -2,6 +2,7 @@ import { useState } from 'react'
 import './App.css'
 import Home from './Home.tsx'
 import About from './About.tsx'
+import Services from './Services.tsx'
 
 function HomePage() {
   return (<Home />);
