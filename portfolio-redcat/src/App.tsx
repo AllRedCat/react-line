@@ -4,6 +4,7 @@ import Home from './Home.tsx'
 import About from './About.tsx'
 import Services from './Services.tsx'
 import Jobs from './Jobs.tsx'
+// import ContactForm from './ContactForm.tsx'
 
 function HomePage() {
   return (<Home />);

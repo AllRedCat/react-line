@@ -3,7 +3,7 @@ import desingImg from './assets/design illustration.svg'
 
 function ContactButton() {
     return (
-        <button id="myButton" className="contact-btn">Contate-me</button>
+        <button className="contact-btn">Contate-me</button>
     );
 }
 
@@ -30,7 +30,7 @@ function Home() {
                 </div>
             </div>
             <div className='my-img'>
-                <img src={desingImg} alt="Design Illustration"/>
+                <img src={desingImg} alt="Design Illustration" />
             </div>
         </div>
     );
