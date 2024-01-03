@@ -28,9 +28,45 @@ function Home() {
 
     // Aqui vai o formulário
     function FormPage() {
+        const [name, setName] = useState("");
+        const [password, setPassword] = useState("");
+
+        function TestButton() {
+            function Teste() {
+                console.log(name, password)
+            }
+
+            return (
+                <>
+                    <button onClick={Teste}>teste (olha o console)</button>
+                </>
+            );
+        }
+
         return (
             <>
                 Here goes the form
+
+                {/* Teste de formulário */}
+                <form>
+                    <label>Enter your name:
+                        <input
+                            type="text"
+                            value={name}
+                            onChange={(e) => setName(e.target.value)}
+                        />
+                    </label>
+                    <label>Enter Password:
+                        <input
+                            type="password"
+                            value={password}
+                            onChange={(e) => setPassword(e.target.value)}
+                        />
+                    </label>
+                </form>
+                <TestButton />
+                {/* Fim do teste */}
+
                 <ContactButton />
             </>
         );
