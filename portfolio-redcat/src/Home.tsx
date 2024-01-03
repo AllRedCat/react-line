@@ -6,6 +6,8 @@ function Home() {
     const [showHome, setShowHome] = useState(true)
     const [showForm, setShowForm] = useState(false)
 
+    // Botão responsavel pela troca de paginas
+    // Nota: Configurar estilo para melhor reutilização
     function ContactButton() {
 
         function SwitchScreen() {
@@ -24,6 +26,7 @@ function Home() {
         );
     }
 
+    // Aqui vai o formulário
     function FormPage() {
         return (
             <>
@@ -33,6 +36,7 @@ function Home() {
         );
     }
 
+    // Aqui é a pagina de introdução
     function HomePage() {
         return (
             <div className="hi-container">
@@ -62,7 +66,7 @@ function Home() {
         );
     }
 
-
+    // Aqui é a parde onde renderiza o que vai ser visto
     return (
         <>
             {showHome && <HomePage />}
