@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import React from 'react'
 import './Home.scss'
 import desingImg from './assets/design illustration.svg'
 
@@ -28,47 +29,41 @@ function Home() {
 
     // Aqui vai o formulário
     function FormPage() {
-        const [name, setName] = useState("");
-        const [password, setPassword] = useState("");
+        const onSubmit = async (event) => {
+            event.preventDefault();
+            const formData = new FormData(event.target);
 
-        function TestButton() {
-            function Teste() {
-                console.log(name, password)
+            formData.append("access_key", "39f25c44-4018-4d36-a260-6ef128baa63a");
+
+            const object = Object.fromEntries(formData);
+            const json = JSON.stringify(object);
+
+            const res = await fetch("https://api.web3forms.com/submit", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                    Accept: "application/json"
+                },
+                body: json
+            }).then((res) => res.json());
+
+            if (res.success) {
+                console.log("Success", res);
             }
-
-            return (
-                <>
-                    <button onClick={Teste}>teste (olha o console)</button>
-                </>
-            );
-        }
+        };
 
         return (
-            <>
-                Here goes the form
-
-                {/* Teste de formulário */}
-                <form>
-                    <label>Enter your name:
-                        <input
-                            type="text"
-                            value={name}
-                            onChange={(e) => setName(e.target.value)}
-                        />
-                    </label>
-                    <label>Enter Password:
-                        <input
-                            type="password"
-                            value={password}
-                            onChange={(e) => setPassword(e.target.value)}
-                        />
-                    </label>
-                </form>
-                <TestButton />
-                {/* Fim do teste */}
-
+            <form onSubmit={onSubmit}>
+                <label>Nome
+                    <input type="text" name="name" />
+                </label>
+                <label>Email
+                    <input type="email" name="email" />
+                </label>
+                <textarea name="message"></textarea>
+                <button type="submit">Submit Form</button>
                 <ContactButton />
-            </>
+            </form>
         );
     }
 
