@@ -7,7 +7,7 @@ function Home() {
     const [showHome, setShowHome] = useState(true)
     const [showForm, setShowForm] = useState(false)
 
-    // Botão responsavel pela troca de paginas
+    // Função de trocar as telas
     // Nota: Configurar estilo para melhor reutilização
     function SwitchScreen() {
         if (showHome) {
@@ -19,13 +19,6 @@ function Home() {
             setShowForm(false)
         }
     }
-    // function ContactButton() {
-
-
-    //     return (
-    //         <button onClick={SwitchScreen} className="contact-btn">Contate-me</button>
-    //     );
-    // }
 
     // Aqui vai o formulário
     function FormPage() {
@@ -61,10 +54,13 @@ function Home() {
                     <label>Email
                         <input type="email" name="email" />
                     </label>
-                    <textarea name="message"></textarea>
-                    <button type="submit" className='btn-submit'>Enviar</button>
-                    <button onClick={SwitchScreen} className='back-btn'>Voltar</button>
-                    {/* <ContactButton /> */}
+                    <label>Mensagem
+                        <textarea name="message"></textarea>
+                    </label>
+                    <div className="btn-space">
+                        <button onClick={SwitchScreen} className='back-btn'>Voltar</button>
+                        <button type="submit" className='btn-submit'>Enviar</button>
+                    </div>
                 </form>
             </div>
         );
@@ -91,7 +87,6 @@ function Home() {
                     </div>
                     <div className="button-space">
                         <button onClick={SwitchScreen} className="contact-btn">Contate-me</button>
-                        {/* <ContactButton /> */}
                     </div>
                 </div>
                 <div className='my-img'>

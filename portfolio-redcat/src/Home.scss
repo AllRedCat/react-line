@@ -105,16 +105,56 @@ h5 {
     display: flex;
     align-items: center;
     justify-content: center;
+    background-color: var(--light-blue);
 }
 
 form {
     width: 400px;
     display: flex;
     flex-direction: column;
+    gap: 20px;
 }
 
 label {
     display: flex;
     flex-direction: column;
     text-align: start;
+}
+
+input {
+    border-style: none;
+    border-radius: 5px;
+    background-color: var(--white);
+    color: var(--black);
+}
+
+textarea {
+    border-style: none;
+    border-radius: 5px;
+    background-color: var(--white);
+    color: var(--black);
+}
+
+.btn-space {
+    display: flex;
+    justify-content: flex-end;
+    gap: 5px;
+}
+
+.back-btn {
+    border: 5px solid var(--white);
+    background-color: transparent;
+    color: var(--black);
+    font-weight: 600;
+    transition: 300ms;
+}
+
+.back-btn:hover {
+    border: 5px solid var(--white);
+    background-color: var(--white);
+}
+
+.btn-submit {
+    background-color: var(--strong-orange);
+    font-weight: 600;
 }
