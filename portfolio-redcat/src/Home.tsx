@@ -1,5 +1,4 @@
 import { useState } from 'react'
-import React from 'react'
 import './Home.scss'
 import desingImg from './assets/design illustration.svg'
 
@@ -42,6 +41,9 @@ function Home() {
 
             if (res.success) {
                 console.log("Success", res);
+            }
+            else {
+                console.error("Error:", res.statusText);
             }
         };
 
