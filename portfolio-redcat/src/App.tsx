@@ -62,7 +62,7 @@ function App() {
     <>
       <body>
         <header>
-          <nav className="navbar navbar-expand-lg">
+          <nav className="navbar navbar-expand-lg fixed-top">
             <div className="container bg-ligh-subtle">
               <a className="navbar-brand" href="#" onClick={HomeShow}>RedCat</a>
               <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
