@@ -43,6 +43,7 @@ function Home() {
                 console.log("Success", res);
             }
             else {
+                alert("Falha ao enviar. Por favor, tente novamente.");
                 console.error("Error:", res.statusText);
             }
         };
