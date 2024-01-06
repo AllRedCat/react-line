@@ -1,3 +1,18 @@
+// Cores
+$black: #262626;
+$red: #FF2E2E;
+$strong-orange: #FF5232;
+$light-orange: #ff6a50;
+$light-blue: #5BFFB5;
+$white: #f7f7f7;
+$light-gray: #f7f7f7;
+$dark-gray: #404040;
+
+section {
+    background-color: $light-blue;
+    margin-top: 100px;
+}
+
 .swiper {
     width: 1000px;
     height: 600px;
