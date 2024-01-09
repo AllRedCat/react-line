@@ -1,6 +1,7 @@
 import './Jobs.scss'
 import { useEffect } from 'react'
 import Swiper from 'swiper'
+import 'swiper/swiper-bundle.css'
 import ProductPreview from './assets/Product-Preview.png'
 import QRCode from './assets/QR code componen.png'
 import RegisterPage from './assets/Register home page.png'
@@ -9,7 +10,7 @@ function Jobs() {
 
     useEffect(() => {
 
-        const swiper = new Swiper('.swiper', {
+        new Swiper('.swiper', {
             // Optional parameters
             direction: 'horizontal',
 
@@ -37,7 +38,7 @@ function Jobs() {
                     <div className="swiper-wrapper">
                         <div className="swiper-slide">
                             <a href="https://allredcat.github.io/Product-preview/">
-                                <img src={ProductPreview} alt="slide-1" width="900" />
+                                <img src={ProductPreview} alt="slide-1" width={900} />
                             </a>
                         </div>
                         <div className="swiper-slide">

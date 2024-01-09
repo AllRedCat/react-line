@@ -93,7 +93,7 @@ function Home() {
                     </div>
                 </div>
                 <div className='my-img'>
-                    <img src={desingImg} alt="Design Illustration" />
+                    <img src={desingImg} alt="Design Illustration" className='home-img' />
                 </div>
             </div>
         );
