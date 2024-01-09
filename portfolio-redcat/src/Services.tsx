@@ -1,4 +1,6 @@
 import './Services.scss'
+import desing from './assets/design.png'
+import vector from './assets/vector.png'
 
 function Services() {
     return (
