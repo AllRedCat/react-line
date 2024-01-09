@@ -5,6 +5,7 @@ import 'swiper/swiper-bundle.css'
 import ProductPreview from './assets/Product-Preview.png'
 import QRCode from './assets/QR code componen.png'
 import RegisterPage from './assets/Register home page.png'
+import { Navigation } from 'swiper/modules'
 
 function Jobs() {
 
@@ -13,6 +14,7 @@ function Jobs() {
         new Swiper('.swiper', {
             // Optional parameters
             direction: 'horizontal',
+            modules: [Navigation],
 
             // Navigation arrows
             navigation: {
@@ -38,17 +40,17 @@ function Jobs() {
                     <div className="swiper-wrapper">
                         <div className="swiper-slide">
                             <a href="https://allredcat.github.io/Product-preview/">
-                                <img src={ProductPreview} alt="slide-1" width={900} />
+                                <img src={ProductPreview} alt="slide-1" className='slide-img' />
                             </a>
                         </div>
                         <div className="swiper-slide">
                             <a href="https://allredcat.github.io/HomePageCadas/">
-                                <img src={RegisterPage} alt="slide-2" width="900" />
+                                <img src={RegisterPage} alt="slide-2" className='slide-img' />
                             </a>
                         </div>
                         <div className="swiper-slide">
                             <a href="https://allredcat.github.io/QR-code-component/">
-                                <img src={QRCode} alt="slide-3" width="900" />
+                                <img src={QRCode} alt="slide-3" className='slide-img' />
                             </a>
                         </div>
                     </div>
