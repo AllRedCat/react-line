@@ -21,9 +21,9 @@ function Home() {
 
     // Aqui vai o formulário
     function FormPage() {
-        const onSubmit = async (event) => {
+        const onSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
             event.preventDefault();
-            const formData = new FormData(event.target);
+            const formData = new FormData(event.currentTarget as HTMLFormElement);
 
             formData.append("access_key", "39f25c44-4018-4d36-a260-6ef128baa63a");
 

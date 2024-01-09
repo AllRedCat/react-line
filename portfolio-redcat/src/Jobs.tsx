@@ -1,25 +1,31 @@
 import './Jobs.scss'
+import { useEffect } from 'react'
+import Swiper from 'swiper'
 import ProductPreview from './assets/Product-Preview.png'
 import QRCode from './assets/QR code componen.png'
 import RegisterPage from './assets/Register home page.png'
 
 function Jobs() {
-    const swiper = new Swiper('.swiper', {
-        // Optional parameters
-        direction: 'horizontal',
 
-        // Navigation arrows
-        navigation: {
-            nextEl: '.swiper-button-next',
-            prevEl: '.swiper-button-prev',
-        },
+    useEffect(() => {
 
-        effect: 'coverflow',
-        coverflowEffect: {
-            rotate: 30,
-            slideShadows: false,
-        },
-    });
+        const swiper = new Swiper('.swiper', {
+            // Optional parameters
+            direction: 'horizontal',
+
+            // Navigation arrows
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+
+            effect: 'coverflow',
+            coverflowEffect: {
+                rotate: 30,
+                slideShadows: false,
+            },
+        });
+    })
 
     return (
         <section id="portfolio" className="jobs-container">
