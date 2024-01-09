@@ -60,7 +60,7 @@ function App() {
 
   return (
     <>
-      <div className='body'>
+      <body>
         <header>
           <nav className="navbar navbar-expand-lg fixed-top">
             <div className="container bg-ligh-subtle">
@@ -85,7 +85,7 @@ function App() {
           {showServices && <ServicesPage />}
           {showJobs && <JobsPage />}
         </main>
-      </div>
+      </body>
     </>
   )
 }
