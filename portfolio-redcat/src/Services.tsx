@@ -12,6 +12,7 @@ function Services() {
                 <div className="services-items">
                     <div className="services">
                         <div className="img-place">
+                            <img src={vector} />
                         </div>
                         <div className="services-text">
                             <h3>Design Gráfico</h3>
@@ -30,6 +31,7 @@ function Services() {
                     </div>
                     <div className="services">
                         <div className="img-place">
+                            <img src={desing} />
                         </div>
                         <div className="services-text">
                             <h3>WEB Design</h3>
