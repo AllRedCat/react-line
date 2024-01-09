@@ -1,8 +1,28 @@
 import './Jobs.scss'
+import ProductPreview from './assets/Product-Preview.png'
+import QRCode from './assets/QR code componen.png'
+import RegisterPage from './assets/Register home page.png'
 
 function Jobs() {
+    const swiper = new Swiper('.swiper', {
+        // Optional parameters
+        direction: 'horizontal',
+
+        // Navigation arrows
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+
+        effect: 'coverflow',
+        coverflowEffect: {
+            rotate: 30,
+            slideShadows: false,
+        },
+    });
+
     return (
-        <section id="portfolio" class="jobs-container">
+        <section id="portfolio" className="jobs-container">
             <div className="name-container">
                 <h2>Ultimos trabalhos</h2>
             </div>
@@ -11,14 +31,17 @@ function Jobs() {
                     <div className="swiper-wrapper">
                         <div className="swiper-slide">
                             <a href="https://allredcat.github.io/Product-preview/">
+                                <img src={ProductPreview} alt="slide-1" width="900" />
                             </a>
                         </div>
                         <div className="swiper-slide">
                             <a href="https://allredcat.github.io/HomePageCadas/">
+                                <img src={RegisterPage} alt="slide-2" width="900" />
                             </a>
                         </div>
                         <div className="swiper-slide">
                             <a href="https://allredcat.github.io/QR-code-component/">
+                                <img src={QRCode} alt="slide-3" width="900" />
                             </a>
                         </div>
                     </div>
